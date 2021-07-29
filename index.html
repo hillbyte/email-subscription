@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Subscription</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        background-color: rgba(156, 159, 165, 0.856);
+        color: rgb(92, 86, 86);
+      }
+      .Signup {
+        margin-top: 150px;
+      }
+      .Signup__text {
+        text-align: center;
+        margin: 0 auto 25px;
+        font-family: "Montserrat", sans-serif;
+        color: #6d6d6d;
+        letter-spacing: 0.5px;
+        font-size: 1em;
+        line-height: 1.5em;
+        width: 90%;
+      }
+      .Signup__form {
+        display: flex;
+        justify-content: center;
+      }
+      @media (max-width: 540px) {
+        .Signup__form {
+          display: block;
+        }
+      }
+      input {
+        border: 2px solid #6d6d6d;
+        border-radius: 3px;
+        padding: 15px;
+        font-family: "Montserrat", sans-serif;
+        letter-spacing: 0.5px;
+        margin-right: 10px;
+        color: #6d6d6d;
+        transition: border 0.3s, box-shadow 0.3s;
+        width: 90%;
+        max-width: 300px;
+      }
+      @media (max-width: 540px) {
+        input {
+          display: block;
+          margin: 0 auto 25px;
+        }
+      }
+      input:focus {
+        outline: none;
+        border: 2px solid #db4646;
+        box-shadow: inset 1px 1px 2px 0 #c9c9c9;
+      }
+      .Signup__button {
+        font-family: "Montserrat", sans-serif;
+        color: #fff;
+        background: #db4646;
+        border: 2px solid #db4646;
+        border-radius: 3px;
+        letter-spacing: 0.5px;
+        padding: 0 40px;
+      }
+      @media (max-width: 540px) {
+        font-size 16px,
+        cursor pointer {
+          display: block;
+          margin: 0 auto 50px;
+          padding: 15px 40px;
+        }
+      }
+      font-size 16px:hover,
+      cursor pointer:hover {
+        background: #df5959;
+        border-color: #df5959;
+      }
+      font-size 16px:active,
+      cursor pointer:active {
+        cursor: pointer;
+        background: #d62e2e;
+        border-color: #d62e2e;
+      }
+      font-size 16px:focus,
+      cursor pointer:focus {
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="Signup">
+      <div class="Signup__text">
+        Give us your e-mail so we can give you special offer next time you visit
+        us
+      </div>
+      <form class="Signup__form" id="newsletter" action="/" method="POST">
+        <input
+          required
+          id="email"
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Your e-mail"
+        />
+        <button form="newsletter" type="submit" class="Signup__button">
+          Subscribe
+        </button>
+      </form>
+    </section>
+  </body>
+</html>
